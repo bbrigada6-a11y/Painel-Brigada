@@ -55,3 +55,13 @@ header p {
   border-radius: 5px;
   font-weight: bold;
 }
+.mensagem {
+  background-color: #00c3ff;
+  color: #0f1c2e;
+  text-align: center;
+  padding: 15px;
+  font-size: 1.2em;
+  font-weight: bold;
+  box-shadow: 0 0 10px #00c3ff55;
+  margin-top: -10px;
+}
