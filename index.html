@@ -2,46 +2,87 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Painel Técnico da Brigada</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Login — Brigada MARTE 7D</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #121212;
+      color: white;
+      font-family: 'Oswald', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .login-panel {
+      background-color: #1c1c1c;
+      border: 2px solid #ff9900;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 0 20px #ff4c4c;
+      width: 320px;
+      text-align: center;
+    }
+    .login-panel h2 {
+      margin-bottom: 20px;
+      color: #ff9900;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      text-align: left;
+    }
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 6px;
+      border: none;
+      background-color: #2c2c2c;
+      color: white;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: linear-gradient(45deg, #ff4c4c, #ff9900);
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      box-shadow: 0 0 10px #ff9900;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>🚨 Central Técnica da Brigada 🚨</h1>
-    <p>Sistema integrado de acesso aos documentos operacionais</p>
-  </header>
-<div class="mensagem">
-  Painel Técnico da Brigada — acesso exclusivo aos documentos operacionais 🚒📂
-</div>
-  <section class="painel">
-    <div class="card">
-      <h2>📍 Croquis e Mapas</h2>
-      <a href="https://drive.google.com/drive/folders/1C5YfdopIb1uNi8RMwCVOlCX8Vq0gpqS8?usp=drive_link" target="_blank">Acessar</a>
-    </div>
-    <div class="card">
-      <h2>📄 Documentos Institucionais</h2>
-      <a href="https://drive.google.com/drive/folders/1Fhe-t_PE0cj7xoMsDIM4CcEZ-t6meNqO?usp=drive_link" target="_blank">Acessar</a>
-    </div>
-    <div class="card">
-      <h2>🧯 Extintores e Vistorias</h2>
-      <a href="https://drive.google.com/drive/folders/1QG31bG-47LBFxCsII7dx_ujkTnqEFYqm?usp=drive_link" target="_blank">Acessar</a>
-    </div>
-    <div class="card">
-      <h2>📆 Folguistas e Escalas</h2>
-      <a href="https://drive.google.com/drive/folders/1a9sPvLGC_ZZjykngFxZevaIWGd7Uhf2u?usp=drive_link" target="_blank">Acessar</a>
-    </div>
-    <div class="card">
-      <h2>📊 Planilhas Gerais</h2>
-      <a href="https://drive.google.com/drive/folders/1gS-V-m5F52IjdOhX-zOhqBVxEvNkD3eY?usp=drive_link" target="_blank">Acessar</a>
-    </div>
-    <div class="card">
-      <h2>🧠 Sistemas e Relatórios</h2>
-      <a href="https://drive.google.com/drive/folders/1AMCRBrflhoQXLvNfCXoJwEq2G6_U3grD?usp=drive_link" target="_blank">Acessar</a>
-    </div>
-    <div class="card">
-      <h2>🚑 Atendimento Pré-Hospitalar (APH)</h2>
-      <a href="https://drive.google.com/drive/folders/1573aQ-1jMmu3Z7OiyYOXB7ChEaxWLJHo?usp=drive_link" target="_blank">Acessar</a>
-    </div>
-  </section>
+
+  <div class="login-panel">
+    <h2>🚒 Painel de Acesso — Brigada MARTE 7D</h2>
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" placeholder="Digite seu nome">
+    
+    <label for="id">ID Operacional:</label>
+    <input type="text" id="id" placeholder="Ex: 0021-BR">
+    
+    <label for="patente">Patente:</label>
+    <select id="patente">
+      <option>Soldado</option>
+      <option>Sargento</option>
+      <option>Tenente</option>
+      <option>Comandante</option>
+    </select>
+    
+    <button onclick="acessarPainel()">🚨 ACESSAR</button>
+  </div>
+
+  <script>
+    function acessarPainel() {
+      alert("Acesso liberado para " + document.getElementById('nome').value);
+      // Aqui você pode redirecionar ou liberar conteúdo
+    }
+  </script>
+
 </body>
 </html>
