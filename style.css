@@ -1,66 +1,81 @@
-/* Painel principal */
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  padding: 30px;
-}
+<!-- Painel de Login -->
+<div class="login-panel">
+  <h2>🚒 Painel de Acesso — Brigada MARTE 7D</h2>
+  <label>Nome:</label>
+  <input type="text" id="nome" placeholder="Digite seu nome">
+  <label>ID Operacional:</label>
+  <input type="text" id="id" placeholder="Ex: BL-003">
+  <label>Patente:</label>
+  <select id="patente">
+    <option>Bravo I</option>
+    <option>Bravo II</option>
+    <option>Bravo III</option>
+    <option>Bravo IV</option>
+    <option>FOX I</option>
+    <option>FOX II</option>
+    <option>Bombeiro Líder (BL)</option>
+    <option>Bombeiro Mestre (BM)</option>
+  </select>
+  <button onclick="acessarPainel()">🚨 ACESSAR</button>
+</div>
 
-/* Card de cada setor */
-.card {
-  background-color: #1c1c1c;
-  border: 2px solid #ff9900;
-  border-radius: 12px;
-  padding: 20px;
-  width: 300px;
-  box-shadow: 0 0 15px #ff4c4c;
-  transition: transform 0.3s ease;
-  text-align: center;
-}
+<!-- Painel Setorial -->
+<section class="card-container" style="display:none">
 
-.card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 25px #ff9900;
-}
+  <div class="card">
+    <h2 class="card-title">🚑 Atendimento Hospitalar (APH)</h2>
+    <p class="status">Responsável: BL — Bravo III</p>
+    <img src="qr-aph.png" alt="QR APH" width="100">
+    <a class="card-button" href="https://drive.google.com/drive/folders/1AtendimentoLink" target="_blank">Acessar APH</a>
+  </div>
 
-/* Título do card */
-.card-title {
-  font-size: 1.5em;
-  margin-bottom: 10px;
-  color: #ff9900;
-}
+  <div class="card">
+    <h2 class="card-title">📆 Escala de Plantão</h2>
+    <p class="status">Equipe Diurna: 👷👷👷 | Noturna: 👷👷</p>
+    <img src="qr-escala.png" alt="QR Escala" width="100">
+    <a class="card-button" href="https://drive.google.com/drive/folders/2EscalaLink" target="_blank">Ver Escala</a>
+  </div>
 
-/* Texto de status */
-.status {
-  margin: 5px 0;
-  font-size: 0.95em;
-  color: #ccc;
-}
+  <div class="card">
+    <h2 class="card-title">🛠️ Manutenção de Elevadores</h2>
+    <p class="status">Elevador 3 — ⚠️ em análise</p>
+    <img src="qr-elevadores.png" alt="QR Elevadores" width="100">
+    <a class="card-button" href="https://drive.google.com/drive/folders/3ElevadoresLink" target="_blank">Relatórios Técnicos</a>
+  </div>
 
-/* Botão de acesso */
-.card-button {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 20px;
-  background: linear-gradient(45deg, #ff4c4c, #ff9900);
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 6px;
-  box-shadow: 0 0 10px #ff9900;
-  transition: background 0.3s ease;
-}
+  <div class="card">
+    <h2 class="card-title">🧯 Vistorias e Extintores</h2>
+    <p class="status">Extintores revisados: 18/20</p>
+    <img src="qr-vistorias.png" alt="QR Vistorias" width="100">
+    <a class="card-button" href="https://drive.google.com/drive/folders/4VistoriasLink" target="_blank">Checklist Técnico</a>
+  </div>
 
-.card-button:hover {
-  background: linear-gradient(45deg, #ff9900, #ff4c4c);
-  box-shadow: 0 0 15px #ff4c4c;
-}
+  <div class="card">
+    <h2 class="card-title">📋 Relatórios Operacionais</h2>
+    <p class="status">Último relatório: 18/09 — 21:00</p>
+    <img src="qr-relatorios.png" alt="QR Relatórios" width="100">
+    <a class="card-button" href="https://drive.google.com/drive/folders/5RelatoriosLink" target="_blank">Exportar PDF</a>
+  </div>
 
-/* QR Code opcional */
-.card img {
-  margin-top: 10px;
-  width: 100px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px #ff9900;
-}
+  <div class="card">
+    <h2 class="card-title">📄 Documentos Institucionais</h2>
+    <p class="status">Normas atualizadas conforme NT 007</p>
+    <img src="qr-documentos.png" alt="QR Documentos" width="100">
+    <a class="card-button" href="https://drive.google.com/drive/folders/6DocumentosLink" target="_blank">Acessar Documentos</a>
+  </div>
+
+  <div class="card">
+    <h2 class="card-title">🎓 Capacitação</h2>
+    <p class="status">Treinamento Bravo II — ativo</p>
+    <img src="qr-capacitacao.png" alt="QR Capacitação" width="100">
+    <a class="card-button" href="https://drive.google.com/drive/folders/7CapacitacaoLink" target="_blank">Ver Cursos</a>
+  </div>
+
+</section>
+
+<script>
+  function acessarPainel() {
+    document.querySelector('.login-panel').style.display = 'none';
+    document.querySelector('.card-container').style.display = 'flex';
+  }
+</script>
